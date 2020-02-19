@@ -31,6 +31,11 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
 
+      - uses: subosito/flutter-action@v1
+        with:
+          flutter-version: "1.12.13+hotfix.8"
+          channel: "stable"
+
       - name: List all simulators
         run: $ANDROID_HOME/tools/bin/avdmanager list
 
