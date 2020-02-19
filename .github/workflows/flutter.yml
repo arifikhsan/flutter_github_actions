@@ -48,11 +48,13 @@ jobs:
           profile: Nexus 6
           script: flutter drive --target=test_driver/app.dart
 
-  ios_trive_test:
+  ios_drive_test:
     strategy:
       matrix:
         device:
           - "iPhone 8 (13.3)"
+          - "iPhone 8 Plus (13.3)"
+          - "iPhone 11 (13.3)"
           - "iPhone 11 Pro Max (13.3)"
       fail-fast: false
     runs-on: macos-latest
