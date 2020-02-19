@@ -15,7 +15,7 @@ jobs:
       - uses: subosito/flutter-action@v1
         with:
           flutter-version: '1.15.3'
-          channel: 'beta'
+          channel: 'dev' # dev, stable, beta
       - run: flutter pub get
       - run: flutter test
       - run: flutter build apk
