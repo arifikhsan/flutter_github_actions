@@ -35,13 +35,13 @@ void main() {
 
     test('starts at 0', () async {
       expect(await driver.getText(counterTextFinder), '0');
-      await takeScreenshot(driver, 'screenshots/initial.png');
+      // await takeScreenshot(driver, 'screenshots/initial.png');
     });
 
     test('increments the counter', () async {
       await driver.tap(buttonFinder);
       expect(await driver.getText(counterTextFinder), '1');
-      await takeScreenshot(driver, 'screenshots/increment.png');
+      // await takeScreenshot(driver, 'screenshots/increment.png');
     });
   });
 }
