@@ -129,7 +129,7 @@ jobs:
         with:
           artifacts: "build/app/outputs/apk/debug/*.apk"
           token: ${{ secrets.GITHUB_TOKEN }}
-          stragety: major
+          tag: v1
       
       # - run: flutter build web
       # Handle the deploy process of your project to GitHub Pages.
