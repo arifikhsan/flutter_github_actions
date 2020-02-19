@@ -20,7 +20,7 @@ jobs:
       - run: flutter test
       - run: flutter build apk
 
-  ui_test:
+  android_driver_test:
     name: UI Test on target ${{ matrix.target }} API ${{ matrix.api-level }}
     runs-on: macos-latest
     strategy:
