@@ -1,4 +1,4 @@
-name: Flutter test
+name: Second test
 on: [push]
 jobs:
   test:
