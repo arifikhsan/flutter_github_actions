@@ -31,6 +31,9 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
 
+      - name: List all simulators
+        uses: $ANDROID_HOME/tools/bin/avdmanager list
+
       - name: run tests
         uses: reactivecircus/android-emulator-runner@v2
         with:
