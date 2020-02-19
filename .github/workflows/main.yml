@@ -103,7 +103,7 @@ jobs:
     runs-on: macos-latest
     #Identifies any jobs that must complete successfully before this job will run.
     needs: [drive_ios,drive_android,test]
-    name: Build  apk # and web
+    name: Build apk and ios
     steps:
       - uses: actions/checkout@v1
       - uses: subosito/flutter-action@v1
@@ -123,6 +123,8 @@ jobs:
       #- run: flutter build macos --debug
       # - run: flutter build apk --debug --split-per-abi
       - run: flutter build apk --release --split-per-abi
+      - run: flutter build ios --release --no-codesign
+      - run: ls build/app/outputs -R
       # This action will create a github release and optionally upload an artifact to it.
       # https://github.com/ncipollo/release-action
       - name: Create a Release APK
