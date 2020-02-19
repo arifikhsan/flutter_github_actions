@@ -21,7 +21,7 @@ jobs:
       - run: flutter build apk
 
   ui_test:
-    name: UI Test on ${{ matrix.os }}
+    name: UI Test on ${{ matrix.target }} ${{ matrix.api-level }}
     runs-on: macos-latest
     strategy:
       matrix:
