@@ -1,4 +1,4 @@
-name: Second test
+name: Build and Test
 on: [push]
 jobs:
   test:
@@ -49,6 +49,7 @@ jobs:
           script: flutter drive --target=test_driver/app.dart
 
   ios_drive_test:
+    name: Ios drive test
     strategy:
       matrix:
         device:
